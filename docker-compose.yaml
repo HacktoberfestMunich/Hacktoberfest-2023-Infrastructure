@@ -4,16 +4,15 @@ services:
   pixelflut-server:
     image: docker.io/sbernauer/breakwater:0.12.0
     restart: unless-stopped
-    entrypoint: ["breakwater", "-l", "[::]:1234", "--vnc-port", "5900"]
+    entrypoint: [ "breakwater", "-l", "[::]:1234", "--vnc-port", "5900" ]
     command: --width 1920 --height 1080 --text "Hacktoberfest 2023 - Crazy Canvas"
     network_mode: "host"
-  
-  ## Missing
-  # pixelflut-playground:
-  #   image: ghcr.io/poeschl/pixelflut-challenge-playground:latest
-  #   restart: unless-stopped
-  #   command: "--host 127.0.0.1 --port 1234 --controlport 4321"
-  #   network_mode: "host"
+
+  pixelflut-playground:
+    image: ghcr.io/poeschl/pixelflut-challenge-playground:latest
+    restart: unless-stopped
+    command: "--host 127.0.0.1 --port 1234 --controlport 4321"
+    network_mode: "host"
   
   pixelflut-labyrinth:
     image: ghcr.io/poeschl/pixelmaze:dev
