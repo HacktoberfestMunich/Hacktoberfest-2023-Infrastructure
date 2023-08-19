@@ -1,0 +1,90 @@
+version: '3'
+
+services:
+  pixelflut-server:
+    image: docker.io/sbernauer/breakwater:0.12.0
+    environment:
+      pixelflut_canvas_height: 1080
+      pixelflut_canvas_width: 1920
+      pixelflut_description: Hacktoberfest 2023 - Crazy Canvas
+    restart: unless-stopped
+    entrypoint: ["breakwater", "-l", "[::]:1234", "--vnc-port", "5901"]
+    command: --width ${pixelflut_canvas_width} --height ${pixelflut_canvas_height} --text "${pixelflut_description}"
+    network_mode: "host"
+  
+  ## Missing
+  # pixelflut-playground:
+  #   image: ghcr.io/poeschl/pixelflut-challenge-playground:latest
+  #   restart: unless-stopped
+  #   command: "--host 127.0.0.1 --port 1234 --controlport 4321"
+  #   network_mode: "host"
+  
+  pixelflut-labyrinth:
+    image: ghcr.io/poeschl/pixelmaze:1.2.0
+    restart: unless-stopped
+    command: "--host 127.0.0.1 --port 1234 -x 640 -y 360 --width 640 --height 360 --timer 600 --blank --cellsize 16 --draw-marker --horns-of-jericho"
+    network_mode: "host"
+
+  ## 8 instances or 1 instance with parameter list from hell
+  # pixelflut-cubedrawer-1:
+  # image: ghcr.io/poeschl/???:1.0.0
+  # restart: unless-stopped
+  # command: "--host 127.0.0.1 --port 1234 -x 20 -y 20 --area-width 600 --area-height 320 --puck-color ff0000 --connections 4 --puck-speed 4 --puck-turbo-active false"
+  # network_mode: "host"
+
+  watchtower:
+    image: docker.io/containrrr/watchtower:1.5.3
+    restart: unless-stopped
+    volumes:
+      -/var/run/docker.sock:/var/run/docker.sock
+    command: "--interval 60 --cleanup --label-enable"
+  
+  ############################################################
+
+  pixelflut-team-brown_independents:
+    image: ghcr.io/HacktoberfestMunich/team:brown_independents
+    restart: unless-stopped
+    labels:
+      com.centurylinklabs.watchtower.enable: true
+  
+  pixelflut-team-yellow_pirates:
+    image: ghcr.io/HacktoberfestMunich/team:yellow_pirates
+    restart: unless-stopped
+    labels:
+      com.centurylinklabs.watchtower.enable: true
+  
+  pixelflut-team-white_dodgers:
+    image: ghcr.io/HacktoberfestMunich/team:white_dodgers
+    restart: unless-stopped
+    labels:
+      com.centurylinklabs.watchtower.enable: true
+  
+  pixelflut-team-red_titans:
+    image: ghcr.io/HacktoberfestMunich/team:red_titans
+    restart: unless-stopped
+    labels:
+      com.centurylinklabs.watchtower.enable: true
+  
+  pixelflut-team-purple_saints:
+    image: ghcr.io/HacktoberfestMunich/team:purple_saints
+    restart: unless-stopped
+    labels:
+      com.centurylinklabs.watchtower.enable: true
+  
+  pixelflut-team-pink_hotspurs:
+    image: ghcr.io/HacktoberfestMunich/team:pink_hotspurs
+    restart: unless-stopped
+    labels:
+      com.centurylinklabs.watchtower.enable: true
+  
+  pixelflut-team-green_twins:
+    image: ghcr.io/HacktoberfestMunich/team:green_twins
+    restart: unless-stopped
+    labels:
+      com.centurylinklabs.watchtower.enable: true
+  
+  pixelflut-team-ginger_mariners:
+    image: ghcr.io/HacktoberfestMunich/team:ginger_mariners
+    restart: unless-stopped
+    labels:
+      com.centurylinklabs.watchtower.enable: true
