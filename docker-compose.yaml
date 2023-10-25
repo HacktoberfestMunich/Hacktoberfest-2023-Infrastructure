@@ -34,6 +34,62 @@ services:
   # command: "--host 127.0.0.1 --port 1234 -x 20 -y 20 --area-width 600 --area-height 320 --puck-color ff0000 --connections 4 --puck-speed 4 --puck-turbo-active false"
   # network_mode: "host"
 
+  # Top left
+  pixelflut-cubedrawer-1:
+    image: ghcr.io/hacktoberfestmunich/cubemover:dev
+    restart: unless-stopped
+    command: ""
+    network_mode: "--host 127.0.0.1 --port 1234 --screen_origin_x 11 --screen_origin_y 191 --screen_width 300 --screen_height 150 --object_width 29 --object_height 17 --step_size_x 1 --step_size_y 1 --color_foreground 'bada55' --color_background '000000' --delay 2"
+  
+  # Top middle
+  pixelflut-cubedrawer-2:
+    image: ghcr.io/hacktoberfestmunich/cubemover:dev
+    restart: unless-stopped
+    command: ""
+    network_mode: "--host 127.0.0.1 --port 1234 --screen_origin_x 651 --screen_origin_y 191 --screen_width 300 --screen_height 150 --object_width 29 --object_height 17 --step_size_x 1 --step_size_y 1 --color_foreground 'bada55' --color_background '000000' --delay 2"
+  
+  # Top right
+  pixelflut-cubedrawer-3:
+    image: ghcr.io/hacktoberfestmunich/cubemover:dev
+    restart: unless-stopped
+    command: ""
+    network_mode: "--host 127.0.0.1 --port 1234 --screen_origin_x 1291 --screen_origin_y 191 --screen_width 300 --screen_height 150 --object_width 29 --object_height 17 --step_size_x 1 --step_size_y 1 --color_foreground 'bada55' --color_background '000000' --delay 2"
+
+  # Middle left
+  pixelflut-cubedrawer-4:
+    image: ghcr.io/hacktoberfestmunich/cubemover:dev
+    restart: unless-stopped
+    command: ""
+    network_mode: "--host 127.0.0.1 --port 1234 --screen_origin_x 11 --screen_origin_y 551 --screen_width 300 --screen_height 150 --object_width 29 --object_height 17 --step_size_x 1 --step_size_y 1 --color_foreground 'bada55' --color_background '000000' --delay 2"
+
+  # Middle right
+  pixelflut-cubedrawer-5:
+    image: ghcr.io/hacktoberfestmunich/cubemover:dev
+    restart: unless-stopped
+    command: ""
+    network_mode: "--host 127.0.0.1 --port 1234 --screen_origin_x 1291 --screen_origin_y 551 --screen_width 300 --screen_height 150 --object_width 29 --object_height 17 --step_size_x 1 --step_size_y 1 --color_foreground 'bada55' --color_background '000000' --delay 2"
+
+  # Bottom left
+  pixelflut-cubedrawer-6:
+    image: ghcr.io/hacktoberfestmunich/cubemover:dev
+    restart: unless-stopped
+    command: ""
+    network_mode: "--host 127.0.0.1 --port 1234 --screen_origin_x 11 --screen_origin_y 911 --screen_width 300 --screen_height 150 --object_width 29 --object_height 17 --step_size_x 1 --step_size_y 1 --color_foreground 'bada55' --color_background '000000' --delay 2"
+  
+  # Bottom middle
+  pixelflut-cubedrawer-7:
+    image: ghcr.io/hacktoberfestmunich/cubemover:dev
+    restart: unless-stopped
+    command: ""
+    network_mode: "--host 127.0.0.1 --port 1234 --screen_origin_x 651 --screen_origin_y 911 --screen_width 300 --screen_height 150 --object_width 29 --object_height 17 --step_size_x 1 --step_size_y 1 --color_foreground 'bada55' --color_background '000000' --delay 2"
+
+  # Bottom right
+  pixelflut-cubedrawer-8:
+    image: ghcr.io/hacktoberfestmunich/cubemover:dev
+    restart: unless-stopped
+    command: ""
+    network_mode: "--host 127.0.0.1 --port 1234 --screen_origin_x 1291 --screen_origin_y 911 --screen_width 300 --screen_height 150 --object_width 29 --object_height 17 --step_size_x 1 --step_size_y 1 --color_foreground 'bada55' --color_background '000000' --delay 2"
+
   watchtower:
     image: docker.io/containrrr/watchtower:1.5.3
     restart: unless-stopped
