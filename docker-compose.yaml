@@ -48,45 +48,53 @@ services:
     restart: unless-stopped
     labels:
       com.centurylinklabs.watchtower.enable: true
+    network_mode: "host"
 
   pixelflut-team-yellow_pirates:
     image: ghcr.io/hacktoberfestmunich/team:yellow_pirates
     restart: unless-stopped
     labels:
       com.centurylinklabs.watchtower.enable: true
+    network_mode: "host"
 
   pixelflut-team-white_dodgers:
     image: ghcr.io/hacktoberfestmunich/team:white_dodgers
     restart: unless-stopped
     labels:
       com.centurylinklabs.watchtower.enable: true
+    network_mode: "host"
 
   pixelflut-team-red_titans:
     image: ghcr.io/hacktoberfestmunich/team:red_titans
     restart: unless-stopped
     labels:
       com.centurylinklabs.watchtower.enable: true
+    network_mode: "host"
 
   pixelflut-team-purple_saints:
     image: ghcr.io/hacktoberfestmunich/team:purple_saints
     restart: unless-stopped
     labels:
       com.centurylinklabs.watchtower.enable: true
+    network_mode: "host"
 
   pixelflut-team-pink_hotspurs:
     image: ghcr.io/hacktoberfestmunich/team:pink_hotspurs
     restart: unless-stopped
     labels:
       com.centurylinklabs.watchtower.enable: true
+    network_mode: "host"
 
   pixelflut-team-green_twins:
     image: ghcr.io/hacktoberfestmunich/team:green_twins
     restart: unless-stopped
     labels:
       com.centurylinklabs.watchtower.enable: true
+    network_mode: "host"
 
   pixelflut-team-ginger_mariners:
     image: ghcr.io/hacktoberfestmunich/team:ginger_mariners
     restart: unless-stopped
     labels:
       com.centurylinklabs.watchtower.enable: true
+    network_mode: "host"
