@@ -80,7 +80,7 @@ services:
   pixelflut-cubedrawer-8:
     image: ghcr.io/hacktoberfestmunich/cubemover:dev
     restart: unless-stopped
-    command: "--host 127.0.0.1 --port 1234 --screen_origin_x 1291 --screen_origin_y 911 --screen_width 300 --screen_height 150 --object_width 29 --object_height 17 --step_size_x 1 --step_size_y 1 --color_foreground 'bada55' --color_background '000000' --delay 2"
+    command: "--host 127.0.0.1 --port 1234 --sox 1291 --soy 911 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'bada55' --cb '000000' --d 0.2"
     network_mode: "host"
 
   watchtower:
