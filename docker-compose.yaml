@@ -18,7 +18,7 @@ services:
   pixelflut-playground:
     image: ghcr.io/poeschl/pixelflut-challenge-playground:latest
     restart: unless-stopped
-    command: "--host 127.0.0.1 --port 1234 --controlport 4321"
+    command: "--host 127.0.0.1 --port 1234 --controlport 8888"
     network_mode: "host"
   
   pixelflut-labyrinth:
