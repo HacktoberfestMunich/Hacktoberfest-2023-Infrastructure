@@ -66,7 +66,7 @@ services:
   pixelflut-cubedrawer-6:
     image: ghcr.io/hacktoberfestmunich/cubemover:dev
     restart: unless-stopped
-    command: "--host 127.0.0.1 --port 1234 --sox 11 --soy 911 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --sy 1 --cf 'bada55' --cb '000000' --d 2"
+    command: "--host 127.0.0.1 --port 1234 --sox 11 --soy 911 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'bada55' --cb '000000' --d 2"
     network_mode: "host"
   
   # Bottom middle
