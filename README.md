@@ -11,5 +11,6 @@ Since the challenges are all communicating from inside the host, this is fine.
 The command for that:
 
 ```shell
-sudo iptables -I INPUT --proto tcp --destination <ip of host> --dport 1234 -j REJECT
+sudo iptables -I INPUT --proto tcp --source localhost --destination 10.201.77.56 --dport 1234 -j ACCEPT
+sudo iptables -I INPUT --proto tcp --destination 10.201.77.56 --dport 1234 -j REJECT
 ```
