@@ -27,60 +27,62 @@ services:
     command: "--host 127.0.0.1 --port 1234 -x 640 -y 360 --width 640 --height 360 --timer 600 --blank --cellsize 16 --draw-marker --horns-of-jericho"
     network_mode: "host"
 
+  # Dynamic stepsize to get different moving pattern
+
   # Top left
   pixelflut-cubedrawer-1:
     image: ghcr.io/hacktoberfestmunich/cubemover:dev
     restart: unless-stopped
-    command: "--host 127.0.0.1 --port 1234 --sox 11 --soy 191 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'bada55' --cb '000000' --d 2"
+    command: "--host 127.0.0.1 --port 1234 --sox 11 --soy 191 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf '38c230' --cb '000000' --d 1.01"
     network_mode: "host"
   
   # Top middle
   pixelflut-cubedrawer-2:
     image: ghcr.io/hacktoberfestmunich/cubemover:dev
     restart: unless-stopped
-    command: "--host 127.0.0.1 --port 1234 --sox 651 --soy 191 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'bada55' --cb '000000' --d 2"
+    command: "--host 127.0.0.1 --port 1234 --sox 651 --soy 191 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'ec6d0b' --cb '000000' --d 1.02"
     network_mode: "host"
   
   # Top right
   pixelflut-cubedrawer-3:
     image: ghcr.io/hacktoberfestmunich/cubemover:dev
     restart: unless-stopped
-    command: "--host 127.0.0.1 --port 1234 --sox 1291 --soy 191 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'bada55' --cb '000000' --d 2"
+    command: "--host 127.0.0.1 --port 1234 --sox 1291 --soy 191 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'b50e9d' --cb '000000' --d 1.03"
     network_mode: "host"
 
   # Middle left
   pixelflut-cubedrawer-4:
     image: ghcr.io/hacktoberfestmunich/cubemover:dev
     restart: unless-stopped
-    command: "--host 127.0.0.1 --port 1234 --sox 11 --soy 551 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'bada55' --cb '000000' --d 2"
+    command: "--host 127.0.0.1 --port 1234 --sox 11 --soy 551 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'c5244f' --cb '000000' --d 1.04"
     network_mode: "host"
 
   # Middle right
   pixelflut-cubedrawer-5:
     image: ghcr.io/hacktoberfestmunich/cubemover:dev
     restart: unless-stopped
-    command: "--host 127.0.0.1 --port 1234 --sox 1291 --soy 551 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'bada55' --cb '000000' --d 2"
+    command: "--host 127.0.0.1 --port 1234 --sox 1291 --soy 551 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf '1369d2' --cb '000000' --d 1.05"
     network_mode: "host"
 
   # Bottom left
   pixelflut-cubedrawer-6:
     image: ghcr.io/hacktoberfestmunich/cubemover:dev
     restart: unless-stopped
-    command: "--host 127.0.0.1 --port 1234 --sox 11 --soy 911 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'bada55' --cb '000000' --d 2"
+    command: "--host 127.0.0.1 --port 1234 --sox 11 --soy 911 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'e7981f' --cb '000000' --d 1.06"
     network_mode: "host"
   
   # Bottom middle
   pixelflut-cubedrawer-7:
     image: ghcr.io/hacktoberfestmunich/cubemover:dev
     restart: unless-stopped
-    command: "--host 127.0.0.1 --port 1234 --sox 651 --soy 911 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'bada55' --cb '000000' --d 2"
+    command: "--host 127.0.0.1 --port 1234 --sox 651 --soy 911 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf '5eccde' --cb '000000' --d 1.07"
     network_mode: "host"
 
   # Bottom right
   pixelflut-cubedrawer-8:
     image: ghcr.io/hacktoberfestmunich/cubemover:dev
     restart: unless-stopped
-    command: "--host 127.0.0.1 --port 1234 --sox 1291 --soy 911 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf 'bada55' --cb '000000' --d 0.2"
+    command: "--host 127.0.0.1 --port 1234 --sox 1291 --soy 911 --sw 300 --sh 150 --ow 29 --oh 17 --dx 1 --dy 1 --cf '6441cb' --cb '000000' --d 1.08"
     network_mode: "host"
 
   watchtower:
