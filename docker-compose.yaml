@@ -4,14 +4,14 @@ services:
   pixelflut-server:
     image: docker.io/sbernauer/breakwater:0.12.0
     restart: unless-stopped
-    entrypoint: [ "breakwater", "-l", "[::]:1234", "--vnc-port", "5900", "--prometheus-listen-address", "9999" ]
+    entrypoint: [ "breakwater", "-l", "[::]:1234", "--vnc-port", "5900", "--prometheus-listen-address", "127.0.0.1:9991" ]
     command: --width 1920 --height 1080 --text "Hacktoberfest 2023 - Crazy Canvas"
     network_mode: "host"
 
   test-pixelflut-server:
     image: docker.io/sbernauer/breakwater:0.12.0
     restart: unless-stopped
-    entrypoint: [ "breakwater", "-l", "[::]:4321", "--vnc-port", "5901", "--prometheus-listen-address", "99999" ]
+    entrypoint: [ "breakwater", "-l", "[::]:4321", "--vnc-port", "5901", "--prometheus-listen-address", "127.0.0.1:9992" ]
     command: --width 1280 --height 720 --text "Hacktoberfest 2023 - Test Canvas"
     network_mode: "host"
 
